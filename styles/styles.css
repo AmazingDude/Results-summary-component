@@ -1,0 +1,208 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk";
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  border-radius: 30px;
+  width: 600px;
+  box-shadow: hsla(0, 0%, 0%, 0.15) 0px 10px 50px;
+}
+.card .card-container {
+  background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 25px;
+  width: 50%;
+}
+.card .card-container h3 {
+  color: hsl(241, 100%, 89%);
+  font-weight: 500;
+  margin: 25px 0 25px 0;
+}
+.card .card-container h2 {
+  color: hsl(221, 100%, 96%);
+  font-size: 55px;
+}
+.card .card-container p {
+  color: hsl(241, 100%, 89%);
+  opacity: 80%;
+  font-weight: 500;
+  font-size: 14px;
+}
+.card .card-container b {
+  color: hsl(0, 0%, 100%);
+  font-size: 25px;
+  margin: 25px 0 10px 0;
+}
+.card .card-container p.info {
+  text-align: center;
+  color: hsl(241, 100%, 89%);
+  padding: 0 50px 50px 40px;
+  opacity: 100%;
+}
+.card .circle {
+  border-radius: 50%;
+  background: linear-gradient(to bottom, hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card .card-description {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5vh;
+  gap: 0.5rem;
+}
+.card .card-description h3 {
+  color: hsl(224, 30%, 27%);
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+.card .card-description .rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.card .card-description .rows .row-first {
+  display: flex;
+  justify-content: space-between;
+  background: hsla(0, 100%, 67%, 0.1);
+  align-items: center;
+  border-radius: 10px;
+  padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+}
+.card .card-description .rows .row-first .badge {
+  display: flex;
+}
+.card .card-description .rows .row-first .badge em {
+  color: #ff5757;
+  font-style: normal;
+  padding: 10px;
+}
+.card .card-description .rows .row-first p {
+  color: #7082b2;
+}
+.card .card-description .rows .row-first p b {
+  color: hsl(224, 30%, 27%);
+}
+.card .card-description .rows .row-second {
+  display: flex;
+  justify-content: space-between;
+  background: hsla(39, 100%, 56%, 0.1);
+  align-items: center;
+  border-radius: 10px;
+  padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+}
+.card .card-description .rows .row-second .badge {
+  display: flex;
+}
+.card .card-description .rows .row-second .badge em {
+  color: #ffb01f;
+  font-style: normal;
+  padding: 10px;
+}
+.card .card-description .rows .row-second p {
+  color: #7082b2;
+}
+.card .card-description .rows .row-second p b {
+  color: hsl(224, 30%, 27%);
+}
+.card .card-description .rows .row-third {
+  display: flex;
+  justify-content: space-between;
+  background: hsla(166, 100%, 37%, 0.1);
+  align-items: center;
+  border-radius: 10px;
+  padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+}
+.card .card-description .rows .row-third .badge {
+  display: flex;
+}
+.card .card-description .rows .row-third .badge em {
+  color: #00bd91;
+  font-style: normal;
+  padding: 10px;
+}
+.card .card-description .rows .row-third p {
+  color: #7082b2;
+}
+.card .card-description .rows .row-third p b {
+  color: hsl(224, 30%, 27%);
+}
+.card .card-description .rows .row-fourth {
+  display: flex;
+  justify-content: space-between;
+  background: hsla(234, 85%, 45%, 0.1);
+  align-items: center;
+  border-radius: 10px;
+  padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+}
+.card .card-description .rows .row-fourth .badge {
+  display: flex;
+}
+.card .card-description .rows .row-fourth .badge em {
+  color: #1125d4;
+  font-style: normal;
+  padding: 10px;
+}
+.card .card-description .rows .row-fourth p {
+  color: #7082b2;
+}
+.card .card-description .rows .row-fourth p b {
+  color: hsl(224, 30%, 27%);
+}
+.card .card-description button {
+  padding: 0.8rem;
+  border: none;
+  background: hsl(224, 30%, 27%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 16px;
+}
+.card .card-description button:hover {
+  background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+@media screen and (max-width: 520px) {
+  body {
+    align-items: flex-start;
+  }
+  .card {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .card .card-container {
+    width: 100%;
+    border-radius: 0 0 2rem 2rem;
+  }
+  .card .card-description {
+    width: 100%;
+    padding: 3vh;
+  }
+  .card .card-description button {
+    padding: 1rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
