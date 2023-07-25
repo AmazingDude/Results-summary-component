@@ -1,0 +1,190 @@
+//Primary
+$Light-red: hsla(0, 100%, 67%, 0.1);
+$Orange-yellow: hsla(39, 100%, 56%, 0.1);
+$Green-teal: hsla(166, 100%, 37%, 0.1);
+$Cobalt-blue: hsla(234, 85%, 45%, 0.1);
+
+//Gradients
+$Light-slate-blue: hsl(252, 100%, 67%);
+$Light-royal-blue: hsl(241, 81%, 54%);
+
+$Violet-blue: hsla(256, 72%, 46%, 1);
+$Persian-blue: hsla(241, 72%, 46%, 0);
+
+//Neutral
+$White: hsl(0, 0%, 100%);
+$Pale-blue: hsl(221, 100%, 96%);
+$Light-lavender: hsl(241, 100%, 89%);
+$Dark-gray-blue: hsl(224, 30%, 27%);
+
+//Font
+$font: 'Hanken Grotesk';
+$size: 18px;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $font;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    border-radius: 30px;
+    width: 600px;
+    box-shadow: hsla(0, 0, 0, 15%) 0px 10px 50px;
+    .card-container{
+        background: linear-gradient(to bottom,$Light-slate-blue,$Light-royal-blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 25px;
+        width: 50%;
+
+        h3{
+            color: $Light-lavender;
+            font-weight: 500;
+            margin: 25px 0 25px 0;
+        }
+
+        h2{
+            color: $Pale-blue;
+            font-size: 55px;
+        }
+        
+        p{
+            color: $Light-lavender;
+            opacity: 80%;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        b{
+            color: $White;
+            font-size: 25px;
+            margin: 25px 0 10px 0;
+        }
+        p.info {
+            text-align: center;
+            color: $Light-lavender;
+            padding: 0 50px 50px 40px;
+            opacity: 100%;
+        }
+    }
+    .circle{
+        border-radius: 50%;
+        background: linear-gradient(to bottom,$Violet-blue,$Persian-blue);
+        width: 150px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-description{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        padding: 5vh;
+        gap: 0.5rem;
+        h3{
+            color: $Dark-gray-blue;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+        .rows{
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            @mixin row($col,$textcol){
+                display: flex;
+                justify-content: space-between;
+                background: $col;
+                align-items: center;
+                border-radius: 10px;
+                padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+                .badge{
+                    display: flex;
+                    
+                    em{
+                        color: adjust-color($color: $textcol, $alpha: 1);
+                        font-style: normal;
+                        padding: 10px;
+                    }
+                }
+
+                p{
+                    color: adjust-color($color: $Dark-gray-blue, $lightness: 30%);
+                    b{
+                        color: $Dark-gray-blue;
+                    }
+                }
+            }
+
+            .row-first{
+                @include row($Light-red, $Light-red);
+            }
+            .row-second{
+                @include row($Orange-yellow, $Orange-yellow);
+            }
+            .row-third{
+                @include row($Green-teal, $Green-teal);
+            }
+            .row-fourth{
+                @include row($Cobalt-blue, $Cobalt-blue);
+            }
+        }
+
+        button{
+            padding: 0.8rem;
+            border: none;
+            background: $Dark-gray-blue;
+            color: $White;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-weight: 500;
+            font-size: 16px;
+            &:hover{
+                background: linear-gradient(to bottom,$Light-slate-blue,$Light-royal-blue);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    body{
+        align-items: flex-start;
+    }
+    
+    .card{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .card-container{
+            width: 100%;
+            border-radius: 0 0 2rem 2rem;
+        }
+        .card-description{
+            width: 100%;
+            padding: 3vh;
+            
+            button{
+                padding: 1rem;
+            }
+        }
+    }
+}
+
+
